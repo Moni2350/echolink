@@ -3,9 +3,9 @@ import { useState } from "react";
 function Dashboard() {
   const [post, setPost] = useState("");
   const [posts, setPosts] = useState([
-    "Need drinking water for 15 people.",
-    "Food packets available near Community Hall.",
-    "Medical camp active from 10 AM to 5 PM.",
+    "📡 Alien signal detected near Northern Zone.",
+    "🏠 Safe shelter available for 50 survivors.",
+    "🚑 Medical response team active in Sector 7.",
   ]);
 
   const handlePost = () => {
@@ -18,29 +18,35 @@ function Dashboard() {
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <h1 className="text-5xl font-bold text-center mb-10">
-        🌍 EchoLink Dashboard
+        🚀 First Contact Coordination Center
       </h1>
 
       {/* Dashboard Cards */}
       <div className="grid md:grid-cols-3 gap-6">
         <div className="bg-gray-900 p-6 rounded-2xl shadow-lg">
-          <h2 className="text-2xl font-bold">🚨 Emergency Alerts</h2>
+          <h2 className="text-2xl font-bold">
+            🚨 Emergency Broadcasts
+          </h2>
           <p className="text-gray-400 mt-2">
-            Active emergency notifications
+            Critical alerts shared across survivor communities
           </p>
         </div>
 
         <div className="bg-gray-900 p-6 rounded-2xl shadow-lg">
-          <h2 className="text-2xl font-bold">📦 Resources</h2>
+          <h2 className="text-2xl font-bold">
+            📦 Survival Resources
+          </h2>
           <p className="text-gray-400 mt-2">
-            Food, water and shelter support
+            Food, water, shelter and medical supplies
           </p>
         </div>
 
         <div className="bg-gray-900 p-6 rounded-2xl shadow-lg">
-          <h2 className="text-2xl font-bold">👥 Community</h2>
+          <h2 className="text-2xl font-bold">
+            👥 Survivor Network
+          </h2>
           <p className="text-gray-400 mt-2">
-            Stay connected with nearby people
+            Stay connected with nearby survivor groups
           </p>
         </div>
       </div>
@@ -48,25 +54,25 @@ function Dashboard() {
       {/* Recent Updates */}
       <div className="mt-10 bg-gray-900 p-6 rounded-2xl">
         <h2 className="text-3xl font-bold mb-4">
-          📢 Recent Updates
+          📢 First Contact Updates
         </h2>
 
         <ul className="space-y-3">
-          <li>🚨 Medical assistance needed in Sector 12</li>
-          <li>📦 Food packets available at Community Center</li>
-          <li>🏠 Temporary shelter opened near City Hall</li>
+          <li>📡 Unknown signal detected near Sector 8</li>
+          <li>🏠 Safe Zone established for civilians</li>
+          <li>🚑 Medical support team deployed</li>
         </ul>
       </div>
 
       {/* Community Feed */}
       <div className="mt-10 bg-gray-900 p-6 rounded-2xl">
         <h2 className="text-3xl font-bold mb-4">
-          👥 Community Feed
+          👥 Survivor Feed
         </h2>
 
         <input
           type="text"
-          placeholder="Share an update..."
+          placeholder="Broadcast a message to survivors..."
           value={post}
           onChange={(e) => setPost(e.target.value)}
           className="w-full p-3 rounded-lg bg-gray-800 mb-4"
@@ -76,7 +82,7 @@ function Dashboard() {
           onClick={handlePost}
           className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg"
         >
-          Post
+          Broadcast
         </button>
 
         <div className="mt-6 space-y-3">

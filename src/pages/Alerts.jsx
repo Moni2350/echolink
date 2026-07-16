@@ -2,21 +2,25 @@ import { useState } from "react";
 
 function Alerts() {
   const [title, setTitle] = useState("");
-  const [alerts, setAlerts] = useState([]);
+  const [alerts, setAlerts] = useState([
+    "📡 Alien signal detected near Sector 8",
+    "🏠 Safe Zone established in Northern Region",
+    "🚑 Medical assistance required in Sector 12",
+  ]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!title) return;
+    if (!title.trim()) return;
 
-    setAlerts([...alerts, title]);
+    setAlerts([title, ...alerts]);
     setTitle("");
   };
 
   return (
     <div className="min-h-screen bg-black text-white p-8">
       <h1 className="text-5xl font-bold text-center mb-10">
-        🚨 Emergency Alerts
+        📡 Emergency Broadcast Network
       </h1>
 
       <form
@@ -25,7 +29,7 @@ function Alerts() {
       >
         <input
           type="text"
-          placeholder="Enter Alert Title"
+          placeholder="Broadcast a critical message..."
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           className="w-full p-3 rounded-lg bg-gray-800 mb-4"
@@ -33,15 +37,15 @@ function Alerts() {
 
         <button
           type="submit"
-          className="w-full bg-red-600 p-3 rounded-lg"
+          className="w-full bg-red-600 hover:bg-red-700 p-3 rounded-lg"
         >
-          Send Alert
+          Send Broadcast
         </button>
       </form>
 
       <div className="max-w-2xl mx-auto mt-8">
         <h2 className="text-2xl font-bold mb-4">
-          Active Alerts
+          🚨 Active Broadcasts
         </h2>
 
         {alerts.map((alert, index) => (
@@ -49,7 +53,7 @@ function Alerts() {
             key={index}
             className="bg-gray-900 p-4 rounded-xl mb-3"
           >
-            🚨 {alert}
+            {alert}
           </div>
         ))}
       </div>

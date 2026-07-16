@@ -4,7 +4,7 @@ function Profile() {
       <div className="bg-slate-900 p-10 rounded-xl w-96">
 
         <h1 className="text-4xl font-bold mb-6">
-          👤 Profile
+          👤 Survivor Profile
         </h1>
 
         <p className="mb-3">
@@ -12,7 +12,7 @@ function Profile() {
         </p>
 
         <p className="mb-3">
-          <strong>Role:</strong> Community Volunteer
+          <strong>Role:</strong> Community Coordinator
         </p>
 
         <p className="mb-3">
@@ -20,7 +20,11 @@ function Profile() {
         </p>
 
         <p className="mb-3">
-          <strong>Location:</strong> Kanchipuram
+          <strong>Safe Zone:</strong> Kanchipuram Sector
+        </p>
+
+        <p className="mb-3">
+          <strong>Status:</strong> Active Survivor
         </p>
 
       </div>
