@@ -1,47 +1,28 @@
 function Profile() {
   return (
-    <div className="min-h-screen bg-black text-white p-8">
-      <h1 className="text-5xl font-bold text-center mb-10">
-        👤 Profile
-      </h1>
+    <div className="min-h-screen bg-black text-white flex justify-center items-center">
+      <div className="bg-slate-900 p-10 rounded-xl w-96">
 
-      <div className="max-w-xl mx-auto bg-gray-900 p-8 rounded-2xl shadow-lg text-center">
+        <h1 className="text-4xl font-bold mb-6">
+          👤 Profile
+        </h1>
 
-        <div className="text-7xl mb-4">
-          👩
-        </div>
-
-        <h2 className="text-3xl font-bold">
-          Monika S
-        </h2>
-
-        <p className="text-gray-400 mt-2">
-          Community Volunteer
+        <p className="mb-3">
+          <strong>Name:</strong> Monika S
         </p>
 
-        <div className="grid grid-cols-2 gap-4 mt-8">
+        <p className="mb-3">
+          <strong>Role:</strong> Community Volunteer
+        </p>
 
-          <div className="bg-gray-800 p-4 rounded-xl">
-            <h3 className="font-bold">⭐ Trust Score</h3>
-            <p className="text-2xl">95</p>
-          </div>
+        <p className="mb-3">
+          <strong>Trust Score:</strong> 95%
+        </p>
 
-          <div className="bg-gray-800 p-4 rounded-xl">
-            <h3 className="font-bold">📍 Location</h3>
-            <p>Kanchipuram</p>
-          </div>
+        <p className="mb-3">
+          <strong>Location:</strong> Kanchipuram
+        </p>
 
-          <div className="bg-gray-800 p-4 rounded-xl">
-            <h3 className="font-bold">🚨 Alerts Posted</h3>
-            <p>12</p>
-          </div>
-
-          <div className="bg-gray-800 p-4 rounded-xl">
-            <h3 className="font-bold">📦 Resources Shared</h3>
-            <p>8</p>
-          </div>
-
-        </div>
       </div>
     </div>
   );
